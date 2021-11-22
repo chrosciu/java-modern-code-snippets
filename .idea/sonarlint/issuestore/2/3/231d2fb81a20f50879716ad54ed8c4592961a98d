@@ -1,0 +1,13 @@
+
+—
+java:S1186
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÔìÒõ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŽÂú˜ÿÿÿÿÿ
+W
+java:S2094"BRemove this empty class, write its code or make it an "interface".(ýë¯
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘
+V	java:S125"<This block of commented-out lines of code should be removed.(°°Å‚úÿÿÿÿ
+F
+java:S1144"+Remove this unused private "handle" method.(Ï²‡„ÿÿÿÿÿ
