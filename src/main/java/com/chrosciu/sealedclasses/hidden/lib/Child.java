@@ -1,4 +1,4 @@
 package com.chrosciu.sealedclasses.hidden.lib;
 
-public class Child {
+public class Child extends Parent {
 }
