@@ -20,8 +20,8 @@ public class Part01ArrowLabels {
                 log.info("First");
                 break;
             case 'z', 'Z':
-                log.info("Last");
                 log.info("In branch for z/Z");
+                log.info("Last");
                 break;
             default: log.info("Middle");
         }
