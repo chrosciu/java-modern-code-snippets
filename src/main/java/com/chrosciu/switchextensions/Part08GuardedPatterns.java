@@ -14,7 +14,7 @@ public class Part08GuardedPatterns {
 
     private static String testObject(Object o) {
         return switch (o) {
-            case String s && s.length() > 5 -> "Long string: " + s;
+            case String s when s.length() > 5 -> "Long string: " + s;
             case String s -> "Short string: " + s;
             case Color c -> "Color: " + c;
             default -> "POJO";
