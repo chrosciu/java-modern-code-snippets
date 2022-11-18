@@ -18,7 +18,8 @@ class Three {}
 
 public class PatternMatching {
     public static void main(String[] args) {
-
+        Parent p = new One();
+        handle(p);
     }
 
     private static void handle(Parent p) {
