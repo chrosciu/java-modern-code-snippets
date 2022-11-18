@@ -1,6 +1,6 @@
-package com.chrosciu.sealedclasses.hidden.app;
+package com.chrosciu.sealedclasses.original.app;
 
-import com.chrosciu.sealedclasses.hidden.lib.Child;
+import com.chrosciu.sealedclasses.original.lib.Child;
 
 //class MyChild extends Parent {}
 
