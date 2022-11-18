@@ -1,6 +1,5 @@
 package com.chrosciu.trywithresources;
 
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -23,8 +22,7 @@ class OtherResource implements AutoCloseable {
 
 @Slf4j
 public class TryWithResources {
-    @SneakyThrows
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws Exception {
         SomeResource someResource = new SomeResource();
         final OtherResource otherResource = new OtherResource();
         try(someResource; otherResource) {
