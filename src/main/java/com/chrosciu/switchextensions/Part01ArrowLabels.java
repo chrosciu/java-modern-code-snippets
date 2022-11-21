@@ -17,9 +17,11 @@ public class Part01ArrowLabels {
     private static void describeLetterOldStyle(char c) {
         switch (c) {
             case 'a', 'A':
+                //int x = 7;
                 log.info("First");
                 break;
             case 'z', 'Z':
+                //int x = 8;
                 log.info("In branch for z/Z");
                 log.info("Last");
                 break;
@@ -31,10 +33,14 @@ public class Part01ArrowLabels {
         switch (c) {
             case 'a', 'A' -> log.info("First");
             case 'z', 'Z' -> {
+                int x = 8;
                 log.info("In branch for z/Z");
                 log.info("Last");
             }
-            default -> log.info("Middle");
+            default -> {
+                int x = 9;
+                log.info("Middle");
+            }
          }
     }
 
