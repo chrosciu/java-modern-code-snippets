@@ -11,9 +11,10 @@ public class App {
         var car = new Car("Fiat", 1000);
         var anotherCar = new Car("Toyota", 100);
         var equalCar = new Car("Fiat", 1000);
-        log.info("{}", car);
+        log.info("{}", car.name());
         log.info("{}", car.price());
         log.info("{}", car.equals(anotherCar));
         log.info("{}", car.equals(equalCar));
+        log.info("{}", car); // toString() used here
     }
 }
