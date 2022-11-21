@@ -23,6 +23,17 @@ public class PatternMatching {
     }
 
     private static void handle(Parent p) {
+        if (p instanceof One) {
+            One o = (One)p;
+            if (o.eligible()) {
+                o.foo();
+            }
+        }
+
+        if (p instanceof One o) {
+            o.foo();
+        }
+
         if (p instanceof One o && o.eligible()) {
             o.foo();
 //        } else if (p instanceof Two t || t.eligible()) {
