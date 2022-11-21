@@ -30,7 +30,7 @@ public class App {
         switch (result) {
             case Success<?> s -> log.info("Success: {}", s.getRv());
             case Error e -> log.warn("Error: ", e.getThrowable());
-            case null -> log.info("Null"); //optional case
+            //case null -> log.info("Null"); //optional case
         }
     }
 }

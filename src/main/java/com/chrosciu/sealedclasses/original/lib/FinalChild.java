@@ -1,4 +1,4 @@
 package com.chrosciu.sealedclasses.original.lib;
 
-abstract class Parent {
+public final class FinalChild extends Parent {
 }
