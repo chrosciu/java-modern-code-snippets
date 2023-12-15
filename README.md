@@ -19,11 +19,11 @@ rm -rf bin
 ### Run code not containing preview features
 
 ```shell
-java -cp "bin:lib/*" com.chrosciu.switchextensions.Part01ArrowLabels 
+java -cp "bin:lib/*" switchextensions.eu.chrost.Part01ArrowLabels 
 ```
 
 ### Run code containing preview features
 
 ```shell
-java -cp "bin:lib/*" --enable-preview com.chrosciu.switchextensions.Part04PatternMatching
+java -cp "bin:lib/*" --enable-preview switchextensions.eu.chrost.Part04PatternMatching
 ```
