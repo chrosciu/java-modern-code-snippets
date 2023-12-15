@@ -6,10 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App {
     private static void extractAssets(Object o) {
-        if (o instanceof Assets(House h, Car c) a) {
+        if (o instanceof Assets a) {
             log.info("Extracted assets: {}", a);
         }
-        if (o instanceof Assets(House h, Car c) a) {
+        if (o instanceof Assets(House h, Car c)) {
             log.info("Extracted house: {}", h);
         }
         if (o instanceof Assets(House(String addr, double area), Car c)) {

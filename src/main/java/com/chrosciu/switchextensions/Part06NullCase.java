@@ -13,10 +13,10 @@ public class Part06NullCase {
     private static String testObject(Object o) {
         return switch (o) {
             case Color c -> "Color: " + c;
-            default -> "POJO";
-            //case Object obj -> "POJO";
             case null -> "Null value";
             case String s -> "Just string: " + s.toLowerCase();
+            default -> "POJO";
+            //case Object obj -> "POJO";
         };
     }
 }

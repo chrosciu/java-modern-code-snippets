@@ -1,13 +1,13 @@
 ### Compile project
 
 ```shell
-javac -d bin --enable-preview --release 17 -cp "lib/*" $(find src/main/java -name "*.java") 
+javac -d bin --enable-preview --release 21 -cp "lib/*" $(find src/main/java -name "*.java") 
 ```
 
 ### Compile project with preview warnings
 
 ```shell
-javac -d bin --enable-preview --release 17 -cp "lib/*" -Xlint:preview $(find src/main/java -name "*.java")
+javac -d bin --enable-preview --release 21 -cp "lib/*" -Xlint:preview $(find src/main/java -name "*.java")
 ```
 
 ### Clean project
