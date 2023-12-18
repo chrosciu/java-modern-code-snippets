@@ -25,8 +25,10 @@ public class TryWithResources {
     public static void main(String[] args) throws Exception {
         SomeResource someResource = new SomeResource();
         final OtherResource otherResource = new OtherResource();
+        // someResource = new SomeResource(); // does not compile with try-with-resources block
         try(someResource; otherResource) {
-            log.info("Working in try block");
+            log.info("Working in try block with resources : {}, {}", someResource, otherResource);
+            throw new RuntimeException("Blah");
         }
     }
 }
