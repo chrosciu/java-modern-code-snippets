@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.SequencedSet;
-import java.util.Set;
+
 
 @Slf4j
 class S01LinkedHashSet {
@@ -29,6 +29,5 @@ class S01LinkedHashSet {
         log.info("Remove last element from reversed: {}", reversed.removeLast()); // 1
         log.info("Reversed: {}", reversed); // [17, 13, 11, 7, 5, 3, 2]
         log.info("Original: {}", primes); // [2, 3, 5, 7, 11, 13, 17]
-
     }
 }
