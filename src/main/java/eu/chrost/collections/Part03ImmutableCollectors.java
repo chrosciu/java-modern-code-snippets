@@ -9,7 +9,10 @@ import java.util.stream.Collectors;
 public class Part03ImmutableCollectors {
     public static void main(String[] args) {
         var originalList = Arrays.asList("A", "B");
-        var list = originalList.stream().collect(Collectors.toUnmodifiableList());
+        var list = originalList.stream()
+                .map(String::toLowerCase)
+                //.collect(Collectors.toUnmodifiableList()); //up to Java 15
+                .toList(); //Java 16 and later
         originalList.set(0, "C");
         log.info("{}", originalList);
         list.set(0, "C");
