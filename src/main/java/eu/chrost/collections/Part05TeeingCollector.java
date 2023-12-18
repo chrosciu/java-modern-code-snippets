@@ -23,7 +23,7 @@ public class Part05TeeingCollector {
                 .collect(Collectors.teeing(
                         Collectors.counting(),
                         Collectors.averagingDouble(i -> i),
-                        Result::new
+                        (count, average) -> new Result(count, average)
                 ));
     }
 
