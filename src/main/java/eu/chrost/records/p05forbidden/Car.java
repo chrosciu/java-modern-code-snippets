@@ -1,8 +1,8 @@
-package eu.chrost.records.forbidden;
+package eu.chrost.records.p05forbidden;
 
 //abstract record AbstractCar(String name) {}
 
-public record Car(String name, long price) {
+record Car(String name, long price) {
     //String type;
 
     //public Car(String name, long price) throws Exception {}

@@ -1,4 +1,4 @@
-package eu.chrost.records.features;
+package eu.chrost.records.p04features;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,13 +10,13 @@ interface Nameable {
 record Car(String type, long price) implements Nameable {
     static int freeCount = 0;
 
-    public Car {
+    Car {
         if (price == 0) {
             freeCount++;
         }
     }
 
-    public static int getFreeCount() {
+    static int getFreeCount() {
         return freeCount;
     }
 
@@ -25,7 +25,7 @@ record Car(String type, long price) implements Nameable {
         return type;
     }
 
-    public void printName() {
+    void printName() {
         interface Printable {
             void print(String s);
         }
@@ -35,7 +35,7 @@ record Car(String type, long price) implements Nameable {
 }
 
 @Slf4j
-public class App {
+class App {
     public static void main(String[] args) {
         var car = new Car("Fiat", 1000);
         log.info("{}", car);
