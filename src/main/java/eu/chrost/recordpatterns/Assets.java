@@ -1,4 +1,4 @@
-package eu.chrost.records.patterns;
+package eu.chrost.recordpatterns;
 
 public record Assets(House house, Car car) {
 }

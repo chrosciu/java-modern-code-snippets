@@ -1,4 +1,4 @@
-package eu.chrost.records.patterns;
+package eu.chrost.recordpatterns;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,15 +11,19 @@ public class App {
         }
         if (o instanceof Assets(House h, Car c)) {
             log.info("Extracted house: {}", h);
+            log.info("Extracted car: {}", c);
         }
         if (o instanceof Assets(House(String addr, double area), Car c)) {
             log.info("Extracted area: {}", area);
         }
-        if (o instanceof Assets(var h, Car(var n, var p))) { //correct but IntelliJ shows error :)
+        if (o instanceof Assets(var h, Car(var n, var p))) {
             log.info("Extracted car with price: {}", p);
         }
         switch (o) {
-            case Assets(House h, Car c) -> log.info("House: {}, car: {}", h, c);
+            //case Assets(House h, Car _) -> log.info("House: {}", h);
+            case Assets(var h, _) -> log.info("House: {}", h);
+            //case Assets(House h, Car c) -> log.info("House: {}, car: {}", h, c);
+            //case Assets a -> log.info("House: {}, car: {}", a.house(), a.car());
             default -> log.info("No asset");
         }
     }
