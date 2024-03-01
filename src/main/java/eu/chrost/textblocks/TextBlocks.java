@@ -1,9 +1,15 @@
 package eu.chrost.textblocks;
 
 public class TextBlocks {
+    private static String original = "<html>\n" +
+            "                <body>\n" +
+            "                    DUMMY TEXT   \n" +
+            "                <body>\n" +
+            "            <html>";
+
     private static String basic = """
             <html>
-                <body>
+                <body foo="">
                     DUMMY TEXT   
                 <body>
             <html>
@@ -49,6 +55,8 @@ public class TextBlocks {
             """;
 
     public static void main(String[] args) {
+        System.out.println("---original---");
+        System.out.println(original);
         System.out.println("---basic---");
         System.out.println(basic);
         System.out.println("---notEmptyLastLine---");
