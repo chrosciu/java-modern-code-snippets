@@ -17,6 +17,7 @@ record CarWithCompactCanonicalConstructor(String name, long price) {
         if (price < 0) {
             throw new IllegalArgumentException("Negative price is not allowed");
         }
+        //implicit assignment of all fields
     }
 }
 
@@ -47,6 +48,8 @@ class App {
         log.info("{}", car2a);
         var car3 = new CarWithOverloadedConstructor("Fiat");
         log.info("{}", car3);
+        var car3a = new CarWithOverloadedConstructor("Fiat", 1000);
+        log.info("{}", car3a);
     }
 }
 

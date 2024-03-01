@@ -16,6 +16,12 @@ record Car(String type, long price) implements Nameable {
         }
     }
 
+    @Override
+    public long price() {
+        log.info("Getting price");
+        return price;
+    }
+
     static int getFreeCount() {
         return freeCount;
     }
@@ -39,6 +45,7 @@ class App {
     public static void main(String[] args) {
         var car = new Car("Fiat", 1000);
         log.info("{}", car);
+        log.info("{}", car.price());
         log.info("{}", car.getName());
         log.info("{}", Car.getFreeCount());
         car.printName();
