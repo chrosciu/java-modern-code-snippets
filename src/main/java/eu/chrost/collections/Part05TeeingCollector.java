@@ -5,13 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 import java.util.stream.Collectors;
 
-record Result(long count, double average) {}
+record Result(long sum, double average) {}
 
 @Slf4j
-public class Part05TeeingCollector {
+class Part05TeeingCollector {
 
     private static Result calculateCountAndAverage(List<Integer> numbers) {
-        var count = numbers.stream().collect(Collectors.counting());
+        var count = numbers.stream().collect(Collectors.summingInt(i -> i));
         //notice that we need to open stream twice
         var average = numbers.stream().collect(Collectors.averagingDouble(i -> i));
         return new Result(count, average);
@@ -21,7 +21,7 @@ public class Part05TeeingCollector {
         return numbers
                 .stream()
                 .collect(Collectors.teeing(
-                        Collectors.counting(),
+                        Collectors.summingInt(i -> i),
                         Collectors.averagingDouble(i -> i),
                         (count, average) -> new Result(count, average)
                 ));
