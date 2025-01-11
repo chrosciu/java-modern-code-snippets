@@ -8,6 +8,7 @@ import java.util.Random;
 public class Part08GuardedPatterns {
     public static void main(String[] args) {
         log.info(testObject(Color.BLACK));
+        log.info(testObject("ABCDEFGHIJK"));
         log.info(testObject("ABC"));
         log.info(testObject(new Random()));
     }
