@@ -12,7 +12,14 @@ class FindFirstGatherer<T> implements Gatherer<T, Void, T> {
 
     @Override
     public Integrator<Void, T, T> integrator() {
-        return null;
+        return Integrator.of((_, item, downstream) -> {
+            if (predicate.test(item)) {
+                downstream.push(item);
+                return false;
+            } else {
+                return true;
+            }
+        });
     }
 }
 

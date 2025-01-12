@@ -13,7 +13,12 @@ class MapNotNullGatherer<T, M> implements Gatherer<T, Void, M> {
 
     @Override
     public Integrator<Void, T, M> integrator() {
-        return null;
+        return Integrator.ofGreedy((_, item, downstream) -> {
+            if (item != null) {
+                return downstream.push(mapper.apply(item));
+            }
+            return true;
+        });
     }
 }
 
