@@ -16,9 +16,8 @@ class FindFirstGatherer<T> implements Gatherer<T, Void, T> {
             if (predicate.test(item)) {
                 downstream.push(item);
                 return false;
-            } else {
-                return true;
             }
+            return true;
         });
     }
 }
