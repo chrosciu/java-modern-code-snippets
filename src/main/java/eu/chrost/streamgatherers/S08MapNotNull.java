@@ -8,11 +8,11 @@ import java.util.function.Function;
 import java.util.stream.Gatherer;
 
 @RequiredArgsConstructor
-class MapNotNullGatherer<T, M> implements Gatherer<T, T, M> {
+class MapNotNullGatherer<T, M> implements Gatherer<T, Void, M> {
     private final Function<T, M> mapper;
 
     @Override
-    public Integrator<T, T, M> integrator() {
+    public Integrator<Void, T, M> integrator() {
         return null;
     }
 }
